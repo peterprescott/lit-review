@@ -35,6 +35,59 @@ literature.
 
 # The Contemporary Need for a Geographic Data Science
 
+In this section I identify the set of factors that have converged to
+create the necessary conditions for the emergence of *data science*
+[@THeyEtAl2009],
+namely the abundance of on-demand computational power made available
+through *the Cloud*, the availability of unprecedented quantities of
+*Big Data*, and the development of sophisticated *Machine Learning*
+techniques achieving astonishing success across a variety of fields.  I
+then show that in spite of overblown claims that these factors will lead
+to "the end of theory" [@CAnderson2008], it is rather the case that they
+make theoretical understanding all the more important. This is argued
+first from an applied angle, considering the importance of
+interpretability in artificial intelligence; and second from a more
+purely formal perspective, arguing that since theoretically there can
+be no universally successfuly algorithmic learner, it becomes necessary
+to have the necessary *domain-knowledge* to appropriately restrict the
+class of hypotheses over which the learning algorithm is optimizing its
+error score. This leads us to consider the need for the *data scientist*
+able to combine such domain knowledge with the requisite computer skills 
+and mathematical abilities; and also to consider whether data science
+itself would most ideally be a new science in itself, or whether the
+need is rather for the diverse domains of scientific discovery to
+integrate the new tools and techniques of cloud-computing,
+data-wrangling, and machine-learning in theory-driven pursuit of their
+central questions: in our case, a *Geographic Data Science*. We survey
+some of the geographic precursors to such a thing, and find unintended
+inspiration in the complaint of @CDaltonThatcher2015 that the hype
+around Big Data closely resembles that which previously surrounded a
+marketing tool known as "geodemographics".
+
+At the turn of the twenty-first century, @DLaney2001 memorably
+characterised the key challenges of data management as being due to
+its explosion in "volume, velocity and variety". The challenge of
+responding to this led to the development of a series of new
+technologies: the *MapReduce* paradigm for distributed data processing
+[@DeanGhemawat2008], the *Hadoop* Distributed File System for storing
+and streaming such data [@ShvachkoEtAl2010], the *Spark* Resilient
+Distributed Dataset [@ZahariaEtAl2012] and subsequent Dataframe API
+[@ArmbrustEtAl2015] for in-memory cluster computing.  As Big 
+
+The sudden rise to ubiquity of the terms mentioned previously can be
+seen by plotting the frequency with which they appear in Google searches
+over the last fifteen years [@Fig1], and observing the point at which a
+term -- first "cloud computing", then "big data", then "machine
+learning" attracts widespread curiosity, before being absorbed into
+common understanding.
+
+ Whether it was
+described as an 'explosion', a 'deluge' [@CAnderson2008], an 'avalanche'
+[@HMiller2010], a 'revolution' [@RKitchin2014], or (more abstractly) 'a
+zeroth order discontinuity in human affairs' [@DDonoho2017], the
+metaphors make clear the size and speed of this sometimes overwhelming
+shift. 
+
 # Geodemographics: Definition, Description, and Development
 
 Geodemographic analysis applies unsupervised machine learning to the
