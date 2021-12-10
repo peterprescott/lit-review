@@ -1,22 +1,24 @@
 ---
-title: Literature Review
+title: "Geodemographics: A Literature Review"
 author: Peter Prescott
 ---
 
-This paper presents a comprehensive review of the background
-literature necessary to understand the current state of geodemographic
-research, to identify unresolved questions and issues requiring further
-study, and to develop an agenda of priorities for this doctoral thesis.
+This paper offers a critical introduction to *geodemographic analysis*,
+reviewing the scholarly literature so as to understand the current
+state of research, identify unresolved questions and quandaries
+requiring further study, and to develop an agenda of priorities for this
+doctoral thesis. 
 
-First, we set geodemographics within the broader contemporary context of
-data science. Next, we introduce geodemographics itself, offering a
-definition, a description, and an initial overview of its development.
-We then review the historical antecedents of geodemographic analysis in
-more detail: the groundbreaking visualizations of nineteenth-century
-urban thematic mapping; the rich investigative agenda of the early
-Chicago School's human ecology; and the quantitative developments of
-social area analysis and factorial ecology.  From there, we examine the
-subsequent critiques and controversies that have been provoked by
+We begin by setting our study within the context of the ubiquitous
+convention of locational inference. Next, we introduce
+geodemographics itself, offering a definition, a description, and an
+initial overview of its development.  We then review the historical
+antecedents of geodemographic analysis in more detail: the
+groundbreaking visualizations of nineteenth-century urban thematic
+cartography; the rich investigative agenda of the early Chicago School's
+human ecology; and the quantitative developments of social area analysis
+and factorial ecology.  From there, we examine the subsequent critiques
+and controversies that have been provoked by
 geodemographics, finding two principal components in the dicussion which
 continue to generate heated debate: the ethical dimension of social
 surveillance on the one hand, and the ontological dimension of
@@ -26,73 +28,64 @@ classifications, which have now become well-estalished; consideration of
 the second leads us to a survey of the intrinsic problems of spatial
 zone design in quantitative geography, a review of the progress in
 addressing those problems, and a deeper investigation into studies of
-neighbourhood dynamics and ontology. Finally, we review developments in
-the techniques of *areal interpolation*, the transformation of a dataset
-from the original geographic partition with which the data is associated
-to some alternative set of areal boundaries. We conclude by summarizing
-the specific research goals resulting from our review of the
-literature.
+neighbourhood dynamics and ontology.  Finally, we review developments in
+the techniques of areal interpolation of a data from some original
+geographic partition to some alternative set of areal boundaries. We
+conclude by summarizing the specific research goals resulting from our
+review of the literature.
 
-# The Contemporary Need for a Geographic Data Science
+# The Ubiquity of Locational Inference
 
-In this section I identify the set of factors that have converged to
-create the necessary conditions for the emergence of *data science*
-[@THeyEtAl2009],
-namely the abundance of on-demand computational power made available
-through *the Cloud*, the availability of unprecedented quantities of
-*Big Data*, and the development of sophisticated *Machine Learning*
-techniques achieving astonishing success across a variety of fields.  I
-then show that in spite of overblown claims that these factors will lead
-to "the end of theory" [@CAnderson2008], it is rather the case that they
-make theoretical understanding all the more important. This is argued
-first from an applied angle, considering the importance of
-interpretability in artificial intelligence; and second from a more
-purely formal perspective, arguing that since theoretically there can
-be no universally successfuly algorithmic learner, it becomes necessary
-to have the necessary *domain-knowledge* to appropriately restrict the
-class of hypotheses over which the learning algorithm is optimizing its
-error score. This leads us to consider the need for the *data scientist*
-able to combine such domain knowledge with the requisite computer skills 
-and mathematical abilities; and also to consider whether data science
-itself would most ideally be a new science in itself, or whether the
-need is rather for the diverse domains of scientific discovery to
-integrate the new tools and techniques of cloud-computing,
-data-wrangling, and machine-learning in theory-driven pursuit of their
-central questions: in our case, a *Geographic Data Science*. We survey
-some of the geographic precursors to such a thing, and find unintended
-inspiration in the complaint of @CDaltonThatcher2015 that the hype
-around Big Data closely resembles that which previously surrounded a
-marketing tool known as "geodemographics".
+On meeting a person for the first time, it is common to ask *'Where are
+you from?'* [@GMyers2006]. Knowing something about the place with which a person is
+associated reveals something about that person -- such is the implicit and
+necessary logic underlying this question, and its commonplace
+conventionality reveals it to be a very widespread conviction. It may then
+turn out that the place is known directly to the one asking, in which case
+it may be considered in its unique specificity. More likely however, it
+will not: the contextual understanding gained from the answer must then be
+mediated by an attempt to fit the reply into some more generalized
+classificatory framework. This will enable the construction of analogies
+with other places of which the enquirer does have direct experience, and
+the conversation can progress. Such a process will more likely happen
+instinctively than reflectively, but it inevitably must happen -- even if
+the (possibly subconscious) mental function to find an appropriate known
+category for the place in question returns an error.
 
-At the turn of the twenty-first century, @DLaney2001 memorably
-characterised the key challenges of data management as being due to
-its explosion in "volume, velocity and variety". The challenge of
-responding to this led to the development of a series of new
-technologies: the *MapReduce* paradigm for distributed data processing
-[@DeanGhemawat2008], the *Hadoop* Distributed File System for storing
-and streaming such data [@ShvachkoEtAl2010], the *Spark* Resilient
-Distributed Dataset [@ZahariaEtAl2012] and subsequent Dataframe API
-[@ArmbrustEtAl2015] for in-memory cluster computing.  As Big 
+Indeed, before the question 'Where are you from?' is verbally uttered,
+a provisional estimate of the answer will already have been made, on the
+basis of visual, auditory, and even olfactory clues. Skin tone, eye
+colour, facial features, and other physical characteristics reflect
+genetic variations optimized over millenia for particular environments
+[@MBamshadOlson2003]. Accent and vocabulary mark the region in which the
+speaker learned to speak a language [@PBoland2010; DWeatherheadEtAl2016]. 
+Clothing and other worn accessories differ according to what is
+culturally fashionable and commercially viable in different places
+[@LCrewe2017]; so do perfumes, deodorants, and other noticeably fragrant
+grooming products [@JHavlicekRoberts2013]. The lingering smell of
+certain spices is suggestive of a diet shaped by a family background in
+a place where such ingredients were inexpensively available
+[@MMallapragada2016].
 
-The sudden rise to ubiquity of the terms mentioned previously can be
-seen by plotting the frequency with which they appear in Google searches
-over the last fifteen years [@Fig1], and observing the point at which a
-term -- first "cloud computing", then "big data", then "machine
-learning" attracts widespread curiosity, before being absorbed into
-common understanding.
+But such qualitative interpretation [@BCypress2019] of individual
+locational clues is inherently time-consuming and subjective.
+And the inferred associations between people and place may also mislead.
+Locational inference may fail simply because a characteristic's location
+is incorrectly identified; or it may fail because although the
+characteristic is associated with the correct location, the cause is
+misconstrued. Alternatively it may be that the scale of location was too
+imprecise to draw accurate conclusions. Another possible failing is the
+interpretative incoherence caused when locational clues map incompatibly
+onto contradictory cognitive categories. 
 
- Whether it was
-described as an 'explosion', a 'deluge' [@CAnderson2008], an 'avalanche'
-[@HMiller2010], a 'revolution' [@RKitchin2014], or (more abstractly) 'a
-zeroth order discontinuity in human affairs' [@DDonoho2017], the
-metaphors make clear the size and speed of this sometimes overwhelming
-shift. 
+# Geodemographics: Description, Definition, and Development
 
-# Geodemographics: Definition, Description, and Development
-
-Geodemographic analysis applies unsupervised machine learning to the
-demographic data associated with geographic areas, thus enabling the
-reduction of the complex multidimensional reality of human society to a
+Geodemographic analysis provides a quantitative approach to the "analysis
+of people by where they live" [@PSleight1997; @RHarrisEtAl2005;
+@RWebberBurrows2018].
+By applying unsupervised machine learning to the
+demographic data associated with geographic areas, the complex multidimensional
+reality of human society can be reduced to a
 more manageable number of statistical types. Having been identified
 algorithmically, these *clusters* can then be described
 qualitatively (@Tbl:oac_tbl) and presented visually (@Fig:oac_fig),
@@ -104,6 +97,7 @@ ranging from direct marketing [@MEvans1998], retail location selection
 [@PLongley2005] : whether that service be in the field of health
 [@MFarrEtAl2008], education [@ASingletonLongley2009c], or policing
 [@DAshbyLongley2005].
+
 
 ![An Example of Geodemographic Visualization:\newline Choropleth Map showing
 2011 Open Area Classification, after @CDRC2021](../fig/CDRC_OAC2011.png){#fig:oac_fig}
