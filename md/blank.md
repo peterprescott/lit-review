@@ -4,16 +4,16 @@ author: Peter Prescott
 ---
 
 This paper offers a critical introduction to *geodemographic analysis*,
-reviewing the scholarly literature so as to understand the current
-state of research, identify unresolved questions and quandaries
+reviewing the relevant literature so as to understand the current
+state of research, to identify unresolved questions and issues 
 requiring further study, and to develop an agenda of priorities for this
 doctoral thesis. 
 
 We begin by setting our study within the context of the ubiquitous
-convention of locational inference. Next, we introduce
-geodemographics itself, offering a definition, a description, and an
-initial overview of its development.  We then review the historical
-antecedents of geodemographic analysis in more detail: the
+practice of locational inference. Next, we introduce
+geodemographics itself, offering a description, an explanatory etymology
+and an initial overview of its development.  We then review the
+historical antecedents of geodemographic analysis in more detail: the
 groundbreaking visualizations of nineteenth-century urban thematic
 cartography; the rich investigative agenda of the early Chicago School's
 human ecology; and the quantitative developments of social area analysis
@@ -25,14 +25,13 @@ surveillance on the one hand, and the ontological dimension of
 neighbourhood definition on the other.  Consideration of the first leads
 us to appreciate the importance of free and open source geodemographic
 classifications, which have now become well-estalished; consideration of
-the second leads us to a survey of the intrinsic problems of spatial
-zone design in quantitative geography, a review of the progress in
-addressing those problems, and a deeper investigation into studies of
-neighbourhood dynamics and ontology.  Finally, we review developments in
-the techniques of areal interpolation of a data from some original
-geographic partition to some alternative set of areal boundaries. We
-conclude by summarizing the specific research goals resulting from our
-review of the literature.
+the second leads us to a survey of the intrinsic problems of the quantitative
+analysis of areal statistics, and a deeper investigation into studies of
+neighbourhood dynamics and ontology. Finally, we review developments
+neighbourhood zone design, and in the techniques of areal interpolation
+of a data from some original geographic partition to some alternative
+set of areal boundaries. We conclude by summarizing the specific
+research goals resulting from our review of the literature.
 
 # The Ubiquity of Locational Inference
 
@@ -67,27 +66,18 @@ certain spices is suggestive of a diet shaped by a family background in
 a place where such ingredients were inexpensively available
 [@MMallapragada2016].
 
-But such qualitative interpretation [@BCypress2019] of individual
-locational clues is inherently time-consuming and subjective.
-And the inferred associations between people and place may also mislead.
-Locational inference may fail simply because a characteristic's location
-is incorrectly identified; or it may fail because although the
-characteristic is associated with the correct location, the cause is
-misconstrued. Alternatively it may be that the scale of location was too
-imprecise to draw accurate conclusions. Another possible failing is the
-interpretative incoherence caused when locational clues map incompatibly
-onto contradictory cognitive categories. 
+But such qualitative interpretation of individual locational clues is
+inherently time-consuming [@BCypress2019] and subjective [@MKalu2019].
 
-# Geodemographics: Description, Definition, and Development
+# Geodemographics: The Analysis of People By Where They Live
 
-Geodemographic analysis provides a quantitative approach to the "analysis
-of people by where they live" [@PSleight1997; @RHarrisEtAl2005;
-@RWebberBurrows2018].
-By applying unsupervised machine learning to the
-demographic data associated with geographic areas, the complex multidimensional
-reality of human society can be reduced to a
-more manageable number of statistical types. Having been identified
-algorithmically, these *clusters* can then be described
+Geodemographic analysis provides a quantitative approach to the
+"analysis of people by where they live" [@PSleight1997;
+@RHarrisEtAl2005; @RWebberBurrows2018].  By applying unsupervised
+machine learning to the demographic data associated with geographic
+areas, the complex multidimensional reality of human society can be
+reduced to a more manageable number of statistical types. Having been
+identified algorithmically, these *clusters* can then be described
 qualitatively (@Tbl:oac_tbl) and presented visually (@Fig:oac_fig),
 creating products that have been used with great success in fields
 ranging from direct marketing [@MEvans1998], retail location selection
@@ -98,11 +88,8 @@ ranging from direct marketing [@MEvans1998], retail location selection
 [@MFarrEtAl2008], education [@ASingletonLongley2009c], or policing
 [@DAshbyLongley2005].
 
-
 ![An Example of Geodemographic Visualization:\newline Choropleth Map showing
 2011 Open Area Classification, after @CDRC2021](../fig/CDRC_OAC2011.png){#fig:oac_fig}
-
-
 
 ```{.table caption="An Example of Geodemographic Cluster Description:\newline Groups and Subgroups from the 2011 OAC, created by @CGaleEtAl2016 {#tbl:oac_tbl}"
 source="../csv/oac2011_.csv"}
@@ -151,9 +138,9 @@ simply segmenting the attribute space by intervals. Instead these could
 be detected by an iterative computational algorithm, made available in
 reproducible FORTRAN code [@RTryonBailey1966]. From a contemporary
 perspective, cluster analysis is a primary example of unsupervised
-machine learning [@AGeron2019], thus making geodemographic analysis one
-of the first, and arguably even the original, example of its
-application.
+machine learning [@SShalev-ShwartzBen-David2014], thus making
+geodemographic analysis one of the first, and arguably even the
+original, example of its application.
 
 While clustering census tracts provides a way of segmenting them into
 similar groups, the *ecological fallacy* [@WRobinson1950] means it does
@@ -169,6 +156,9 @@ ecology* combined the empirical investigation exemplified by @CBooth1904
 with the more theoretical sociology of @GSimmel1908, with whom he had
 studied in Germany.
 
+![Concentric Zone
+Diagrams, after @EBurgess1925](../fig/EBurgess1925.png){#fig:BurgessDiagrams}
+
 This account of geodemographic historiography is expressed in detail in
 the collaborative monographs of @RHarrisEtAl2005 and
 @RWebberBurrows2018. Booth's urban poverty maps offer "the first example
@@ -180,130 +170,113 @@ development of quantitative social area analysis and subsequent
 factorial ecology [pp.39-40], paving the way for the emergence of
 geodemographic products [p.55].
 
+# The Historical Roots of Geodemographics
 
-# Historical Antecedents: Thematic Mapping, Urban Ecology, Quantitative Analysis
-
-Modern *demography*, the science of enumerating
-populations, began with @JGraunt1662 and his realization that London's
-mortality bills and christening records could be used as data sources for an
-empirical analysis of London's population growth [@DGlass1963]. Graunt's
-demographic analysis was geographic, insofar as it dealt with data records from
-different parishes, and suggested the role of migration from rural parishes to
-London as a reason for the apparent ability of the metropolis to sustain
-a higher rate of deaths than births [@CTaeuber1941]. Graunt's work inspired
-mathematicians such as Huygens, Leibniz, and Bernoulli in their development of
-classical probability theory [@PKreager1993]. But his originality was in the way
-he saw the socio-economic and political significance of numbering population
+Modern *demography*, the science of enumerating populations, began with
+@JGraunt1662 and his realization that London's mortality bills and
+christening records could be used as data sources for an empirical
+analysis of London's population growth [@DGlass1963]. Graunt's
+demographic analysis was geographic, insofar as it dealt with data
+records from different parishes, and suggested the role of migration
+from rural parishes to London as a reason for the apparent ability of
+the metropolis to sustain a higher rate of deaths than births
+[@CTaeuber1941]. Graunt's work inspired mathematicians such as Huygens,
+Leibniz, and Bernoulli in their development of classical probability
+theory [@PKreager1993]. But his originality was in the way he saw the
+socio-economic and political significance of numbering population
 [@ZBayatrizi2008].
 
-The most straightforward way to establish the number of a population is simply
-to count it directly. Parliament debated the idea of a national census in 1753,
-but the bill did not pass; it was seen as an unprecedented intrusion into
-private matters, and some argued it was "subversive of the last remains of
-English liberty" [@HRobbins2010,p.202]. However, when the American colonies
-became independent, and established themselves as a republican democracy,
-a decennial census was made a constitutional requirement; a corallary of the
-need "to ensure the civic empowerment of each individual" [@TSullivan2020]. The
-first census of the USA was taken in 1790 [@MAnderson2015], and Europe followed
-suit shortly thereafter: Britain in 1801 [@DGlass1978; @KLevitan2011], and
-France soon afterwards [@JCole2000].
+The most straightforward way to establish the number of a population is
+simply to count it directly. Parliament debated the idea of a national
+census in 1753, but the bill did not pass; it was seen as an
+unprecedented intrusion into private matters, and some argued it was
+"subversive of the last remains of English liberty"
+[@HRobbins2010,p.202]. However, when the American colonies became
+independent, and established themselves as a republican democracy, a
+decennial census was made a constitutional requirement; a corallary of
+the need "to ensure the civic empowerment of each individual"
+[@TSullivan2020]. The first census of the USA was taken in 1790
+[@MAnderson2015], and Europe followed suit shortly thereafter: Britain
+in 1801 [@DGlass1978; @KLevitan2011], and France soon afterwards
+[@JCole2000].
 
-The new era of (nineteenth-century) 'big data', meant @JFletcher1847 could
-combine "the last Census of the Population; the Income Tax Returns; the Home
-Office Tables of Criminal Offenders; the latest Reports of the Poor Law
-Commissioners; and a Summary of Savings Banks" (p.194) to produce a Comparison
-of the different Districts of England and Wales, in respect to the Distribution
-of the Population, its Social Organization, its Education and Ignorance, its
-Providence and Improvidence, and its Crime, in which each county has been
-classified "on the evidence of the occupation abstract of 1841, with a further
-reference to their geographical contiguity, and the different origin of the
-great body of their population". Within each district, counties were also
-classed with regards to educational attainment. This sociodemographic analysis
-is then visualized by a map of England (and Wales) in which each county in
-coloured to show how it has been classified (@Fig:Fletcher_EnglishRegions). Two
-years later he expanded the work to included twelve shaded maps for each
-variable independently [@HFunkhouser1937], apparently motivated by a comment
-from Prince Albert [@HWainer2012].
+The new era of (nineteenth-century) 'big data', meant @JFletcher1847
+could combine "the last Census of the Population; the Income Tax
+Returns; the Home Office Tables of Criminal Offenders; the latest
+Reports of the Poor Law Commissioners; and a Summary of Savings Banks"
+(p.194) to produce a Comparison of the different Districts of England
+and Wales, in respect to the Distribution of the Population, its Social
+Organization, its Education and Ignorance, its Providence and
+Improvidence, and its Crime, in which each county has been classified
+"on the evidence of the occupation abstract of 1841, with a further
+reference to their geographical contiguity, and the different origin of
+the great body of their population". Within each district, counties were
+also classed with regards to educational attainment. This
+sociodemographic analysis is then visualized by a map of England (and
+Wales) in which each county in coloured to show how it has been
+classified (@Fig:Fletcher_EnglishRegions). Two years later he expanded
+the work to included twelve shaded maps for each variable independently
+[@HFunkhouser1937], apparently motivated by a comment from Prince Albert
+[@HWainer2012].
 
 ![England's Manufacturing Districts, after
-@JFletcher1847](../figures/JFletcher1847.jpg){#fig:Fletcher_EnglishRegions}
+@JFletcher1847](../fig/JFletcher1847.jpg){#fig:Fletcher_EnglishRegions}
 
-At the smaller scale of the neighbourhood, a Church of England minister in
-Liverpool called Abraham Hume [@LVaughan2018, p.62] organized a detailed
-door-to-door survey of the social condition of his parishioners [@AHume1850;
-@AHume1858], which he presented on a large coloured map [@AHume1858a], showing
-simultaneously poverty, crime, health, church and school data on a vertical
-plan of the city (@Fig:Hume_LiverpoolMap). Poverty is shown by street,
-according to whether the street is classed as 'wholly pauper' or partially so,
-as assessed by "the relieving officers within the Borough" (p.21). 
+At the smaller scale of the neighbourhood, a Church of England minister
+in Liverpool called Abraham Hume [@LVaughan2018, p.62] organized a
+detailed door-to-door survey of the social condition of his parishioners
+[@AHume1850; @AHume1858], which he presented on a large coloured map
+[@AHume1858a], showing simultaneously poverty, crime, health, church and
+school data on a vertical plan of the city (@Fig:Hume_LiverpoolMap).
+Poverty is shown by street, according to whether the street is classed
+as 'wholly pauper' or partially so, as assessed by "the relieving
+officers within the Borough" (p.21). 
 
 ![*Ecclesiastical and Social Map of Liverpool* after
-@AHume1858a](../figures/AHume1858Rotated.jpg){#fig:Hume_LiverpoolMap}
+@AHume1858a](../fig/AHume1858.jpg){#fig:Hume_LiverpoolMap}
 
-Hume is aware that a more precise analysis would be made possible "if we could
-compare *houses, families, or individuals* relieved" (p.22), but is content
-that "for practical purposes they are sufficiently so now". Still, when
-@JTobias1974 applied modern mathematical methods to Hume's data (examining
-p-value scores, chi-squared tests and correlation coefficients) he found that
-"Hume's impressionistic descriptions have been shown to be consistent with the
-data he collected but doubtless never analysed in this way" [p.229]. Hume is
-also interested in patterns of residential mobility and their effects on
-neighbourhood change; in particular, the way that congregational Nonconformist
-churches (in contrast to the territorial Established Church), tend to follow
-the paths trod by the middle classes from the centre of a town to the suburbs
-[@WPickering1972, p.42; @AWilcox2014, p.12].
+Hume is aware that a more precise analysis would be made possible "if we
+could compare *houses, families, or individuals* relieved" (p.22), but
+is content that "for practical purposes they are sufficiently so now".
+Still, when @JTobias1974 applied modern mathematical methods to Hume's
+data (examining p-value scores, chi-squared tests and correlation
+coefficients) he found that "Hume's impressionistic descriptions have
+been shown to be consistent with the data he collected but doubtless
+never analysed in this way" [p.229]. Hume is also interested in patterns
+of residential mobility and their effects on neighbourhood change; in
+particular, the way that congregational Nonconformist churches (in
+contrast to the territorial Established Church), tend to follow the
+paths trod by the middle classes from the centre of a town to the
+suburbs [@WPickering1972, p.42; @AWilcox2014, p.12].
 
-Hume's preferred name for the general subject which encompassed all the
-particular social sciences within it, was 'Ethnology'. He articulated and
-applied his theory of ethnology over the course of several articles in the
-nascent *Ulster Journal of Archaeology* [@AHume1853; -@AHume1856; -@AHume1859],
-describing and analyzing the counties of Down and Antrim (@Fig:HumeEth). Hume is interested in
-Down and Antrim because "the variety of population which these two counties
-contain" (p.14) -- specifically, locals of Irish, Scottish, and English
-heritage -- means that the relationship between ancestry, language, and
-religion can be explored in some detail. In
-some ways his articles resemble the generic descriptive regional geographies
-that described *The Natural History and Antiquities* of the County of Surrey
-[@JAubrey1719], Northumberland [@JWallis1769], or the parish of Selborne
-[@GWhite1813]. But although he embraces the old form, he attempts to inject it
-with a new scientific rigour, backed with quantitative analysis -- in many ways
-anticipating changes to the subject of Geography which would finally emerge on
-a wider scale a century later, in the contested 'quantitative revolution' of
-the 1950s-70s [@RJohnston2008,pp.52-54]. Indeed, Hume shows himself to be
-aware of the complications of spatial resolution for statistical analysis
-[@AHorner2010] -- what we now know as the *modifiable areal unit problem* 
-[@SOpenshaw1984b].
+Although the claim is widespread that Charles Booth's maps are the
+first example of geodemographic visualization [@RHarrisEtAl2005, p.30;
+@RBurrowsGane2006, p.794; @CDaltonThatcher2015, p.3;
+@RWebberBurrows2018, p.31], we have seen that typological neighbourhood
+mapping in fact preceded Booth by more than half a century
+[@LVaughan2018, p.62; @ARobinson1982, p.184]. To state this takes
+nothing away from Booth's magisterial work, which we can now consider
+in more detail.
 
-Although the claim that Charles Booth's maps are the
-first example of geodemographic visualization is frequently repeated
-[@RHarrisEtAl2005, p.30; @RBurrowsGane2006, p.794; @CDaltonThatcher2015, p.3;
-@RWebberBurrows2018, p.31], an investigation of nineteenth-century
-cartography shows that Booth's (undeniable) achievement was climactic rather
-than conceptual. Typological population mapping in fact preceded Booth by more
-than half a century [@LVaughan2018, p.62; @ARobinson1982, p.184]. To
-state this takes nothing away from Booth's magisterial survey, which we can 
-now consider in more detail.
-
-
-Charles Booth was a wealthy Liverpool shipowner and enthusiastic member of the
-Royal Statistical Society, which he served for a time as president
-[@CBooth1893]. He was also an earnest Unitarian, and felt a sense of
-personal responsibility for the wretched conditions of poor labourers
-[@CCollet1945]. In 1887, Booth began work on a "proposed inquiry into
-the condition and occupations of the people of London" [@CBooth1887],
-motivated perhaps by a "desire to prove the Socialists wrong in their
-estimate of the extent of poverty in London" [@HPfautz1967, p.21].
-@RHarrisEtAl2005 [p.30] follow @HPfautz1967 [p.21] and @TSimeySimey1960
-[p.69] in accepting the claim of @HHyndman1911 [p.303] that he was
-a causal influence; however @RODayEnglander1992 [p.30-31] disagree,
-arguing that althoguh Hyndman's conclusions may have disturbed Booth,
-"they certainly did not provide the main impetus for Booth's survey".
-Over the next seventeen years, Booth and his research team filled 450
-notebooks with information about the capital's living and working
-conditions, which were published in three printed editions, the final
-running to seventeen volumes [@SDonnelly2002]. Funding for the project
-came from the profits of Booth's own commercial success
-[@SDonnelly2002]. 
+Charles Booth was a wealthy Liverpool shipowner and enthusiastic member
+of the Royal Statistical Society, which he served for a time as
+president [@CBooth1893]. He was also an earnest Unitarian, and felt a
+sense of personal responsibility for the wretched conditions of poor
+labourers [@CCollet1945]. In 1887, Booth began work on a "proposed
+inquiry into the condition and occupations of the people of London"
+[@CBooth1887], motivated perhaps by a "desire to prove the Socialists
+wrong in their estimate of the extent of poverty in London"
+[@HPfautz1967, p.21].  @RHarrisEtAl2005 [p.30] follow @HPfautz1967
+[p.21] and @TSimeySimey1960 [p.69] in accepting the claim of
+@HHyndman1911 [p.303] that he was a causal influence; however
+@RODayEnglander1992 [p.30-31] disagree, arguing that althoguh Hyndman's
+conclusions may have disturbed Booth, "they certainly did not provide
+the main impetus for Booth's survey".  Over the next seventeen years,
+Booth and his research team filled 450 notebooks with information about
+the capital's living and working conditions, which were published in
+three printed editions, the final running to seventeen volumes
+[@SDonnelly2002]. Funding for the project came from the profits of
+Booth's own commercial success [@SDonnelly2002]. 
 
 Booth and his team drew on extensive interviews with the house-to-house
 visitors employed by the School Board [@CBooth1887], which they combined
@@ -315,12 +288,15 @@ colours representing the poorer residential areas, although the precise
 correspondence between class and colour turns out on close inspection to
 be somewhat ambiguous [@MKimball2006].
 
+![Close-up from *Descriptive Map of London Poverty* after @CBooth1889](../fig/CBoothCloseUp.jpg){#fig:BoothMap}
+
 Booth expressed his doubts that he could make his figures "as luminous
 and picturesque to any other eye as they are to mine" [@CBooth1904,
-p.63), but for some he certainly succeeded. The map (@Fig:BoothMap) received intense
-media attention when it was first put on public display [@KBales1999],
-and his methodology influenced other reform-minded social researchers,
-such as @JAddams1895, @WDuBois1899, and @BRowntree1902.
+p.63), but for some he certainly succeeded. The map (@Fig:BoothMap)
+received intense media attention when it was first put on public display
+[@KBales1999], and his methodology influenced other reform-minded social
+researchers, such as @JAddams1895, @WDuBois1899, @BRowntree1902, and
+@TMarr1904.
 
 On the other hand, Booth was sidelined by the academic
 institutionalization of sociology, marked in Britain by the appointment
@@ -328,8 +304,8 @@ of a first Professor of Sociology in 1904 at the London School of
 Economics [@CTopalov1993]. When compared with the strongly theory-driven
 work  of continental sociologists such as Durkheim and Weber, Booth's
 "uncontrolled empiricism" has been judged to lack "clear objectives and
-ideas" and "sociological imagination" [@JWestergaard1969]. Half
-a century later, @TSimeySimey1960 attempted to position Booth as the
+ideas" and "sociological imagination" [@JWestergaard1969]. Half a
+century later, @TSimeySimey1960 attempted to position Booth as the
 founding father of British sociology, but this was arguably driven
 primarily by a desire to locate a respectable pedigree for their subject
 [@RODayEnglander1992]. The claim that Booth invented the concept of 'the
@@ -337,33 +313,31 @@ poverty line' [@TSimeySimey1960, p.88] also fails under scrutiny;
 @AGillie1996 shows that it must rather have come directly from the
 London School Board, whose home-visitation workers supplied Booth's
 project with information about families' living conditions, and which
-was required by the implications of the 1870 Education Act to develop
-a criterion of poverty.
+was required by the implications of the 1870 Education Act to develop a
+criterion of poverty.
 
 Booth's statistical enthusiasm also lacked mathematical expertise
 [@HSelvin1976]. The physicist @GYule1895 was provoked "to severely
 criticize the [statistical] methods on which he bases his results"
 (p.608), showing repeatedly (Yule gives sixteen specific examples) that
-Booth claims his figures show no definite relation, when in fact
-a strong numerical correlation is present. 
+Booth claims his figures show no definite relation, when in fact a
+strong numerical correlation is present. 
 
 It is also worth noting explicitly that while Booth's research was
 multivariate in its input [@WDavies1978], its output was not a true
 multidimensional classification of different *types* of residential
 neighbourhood, but rather a unidimensional index of poverty separated
-into quantiles. In that respect it is more similar to the
-modern Index of Multiple Deprivation [@IDeasEtAl2003] than a modern
-geodemographic classification. This meant that Booth's analysis was
-ill-equipped to deal with communities differentiated by factors other
-than merely economic, and it is thus unsurprising that he struggled to
-fit Jewish immigrants into his schema [@DEnglander1989].
+into quantiles. In that respect it is more similar to the modern Index
+of Multiple Deprivation [@IDeasEtAl2003] than a modern geodemographic
+classification. This meant that Booth's analysis was ill-equipped to
+deal with communities differentiated by factors other than his 
+economic index, and it is thus unsurprising that he struggled to fit
+Jewish immigrants into his schema [@DEnglander1989].
 
 However, though Booth may have been sidelined by the development of
 academic sociology in Britain, his style of detailed social survey had
 somewhat more influence on its development in America, particularly
 through the Chicago School.
-
-## The Chicago School
 
 The phrase 'Chicago School' implies an institution, a group of people,
 a body of work, a set of ideas -- and a period of time during which
@@ -422,7 +396,7 @@ segregation can intensify the "intimacies and solidarity" of the local
 neighbourhood group (p.9).
 
 ![Community Areas of Chicago in
-1930](../figures/ChicagoCommunityAreas.png){#fig:ChicagoCommunity}
+1930](../fig/ChicagoCommunityAreas.png){#fig:ChicagoCommunity}
 
 The volume includes E. Burgess's famous Concentric Zone diagram
 (@Fig:BurgessDiagrams), an essay by R. McKenzie explaining the Chicago
@@ -444,8 +418,6 @@ as they moved towards more empirically grounded ecological maps and
 census tract maps [@BOwens2012] -- for example, see
 @Fig:ChicagoCommunity. 
 
-## Quantitative Social Area Analysis
-
 The American Census Bureau first reported statistics by tract for the
 1920 census [@DFoley1953], beginning with ten cities and expanding by
 the 1950s to seventy-two. The first census tract maps were produced (for
@@ -454,7 +426,7 @@ by @RFletcherEtAl1935. @EKnaapEtAl2019 note that census data meant that
 "social processes, which are difficult to observe [using social survey
 methods], could be treated as latent variables and modeled... easily".
 
-![*Social Area Analysis* of the San Francisco Bay Region, after @EShevkyBell1955](../figures/ShevkyBell1955.png){#fig:ShevkyBell_SanFrancisco}
+![*Social Area Analysis* of the San Francisco Bay Region, after @EShevkyBell1955](../fig/ShevkyBell1955.png){#fig:ShevkyBell_SanFrancisco}
 
 It was Eshref Shevky and his associates who developed a more
 sophisticated multivariate analysis of census tract data, reducing the
@@ -473,8 +445,7 @@ interest was the claim that the principle components to which they had
 reduced their data were the fundamental factors differentiating the
 residential groups of modern society [@DTimms1971].
 
-
-# Stan Openshaw and the Two Geodemographic Controversies
+# The Ontological and Ethical Critiques of Geodemographics
 
 While Robbin coined the term 'geodemographics' and successfully turned
 it into a profitable commercial product, his impact on the academic
@@ -531,19 +502,15 @@ of the dangers of unfettered technological surveillance, foreseeing the
 need for the sort of data protection legislation now established by
 statutes such as @GDPR2016.  
 
-
-# Surveillance Capitalism and the Need for Open-Source Geodemographics
-
 In our contemporary context, @SGilbert2021 offers another helpful
 response to the suggestion that gathering and profiting from people's
 data is a sort of exploitative 'data colonialism' [@JThatcherEtAl2016],
 in which an intrinsically valuable resource is being unfairly extracted.
-Rather than being 'the new oil' [e.g. @MSzczepanski2020], Gilbert, whose
-describes himself as a 'data optimist', suggests that a better metaphor
-for big data would in fact be 'the new manure': "a mundane by-product of
-life" [p.36], which, like manure that is processed into fertiliser, only
-has economic value because there are businesses that have invested in
-processing it into something useful.  
+Rather than being 'the new oil' [@ASpijker2014], Gilbert suggests that a
+better metaphor for big data would in fact be 'the new manure': "a
+mundane by-product of life" [p.36], which, like manure that is processed
+into fertiliser, only has economic value because there are businesses
+that have invested in processing it into something useful.  
 
 We cannot in this paper attempt a comprehensive evaluation of Gilbert's
 attempt to defend big data analytics and develop a positive account of
@@ -552,9 +519,10 @@ will suffice to note that on the one hand, a positive argument can be
 made for it, while on the other hand, to whatever extent the negative
 assessment is considered valid, the development of free and open
 alternatives would seem to be a necessary strategy of resistance
-[@DSwanlundSchuurman2019].  But regarding the ontological question of
+[@DSwanlundSchuurman2019]. But regarding the ontological question of how
+to define a neighbourhood, more must be said.
 
-# Problems and Progress in Spatial Zone Design
+# Defining Neighbourhoods: Problems and Possibilities
 
 One possible response to the question would be to suggest that in fact
 the problem of neighbourhood definition is nothing more than a
@@ -600,9 +568,6 @@ that for every spatial effect, there must be *some* true causally
 relevant geographic context, rekindles the hope that even in considering
 a general typology of residential neighbourhoods, such a context might
 be found.
-
-
-# Neighbourhood Dynamics and Ontology
 
 What then are the causally relevant contextual elements that make a
 neighbourhood a neighbourhood? We find ourselves returning to the
@@ -656,7 +621,7 @@ residents have".
 
 Drawing on the suggestion that there are analogies between human social
 behaviour and the ideas of animal *territoriality* developed by
-zoologists such as @MLipitz1969 and @DMorris1967a, @GSuttles1972
+zoologists such as @MLipitz1969 and @DMorris1967, @GSuttles1972
 suggests that neighbourhood community "is best conceived of as a pyramid
 of progressively more inclusive groupings" (p.45), and identifies four
 relevant levels of analysis: the 'face-block', the 'defended
@@ -687,7 +652,7 @@ cognitive mapping. In the last decade the explosion of ubiquitous urban
 data [@DArribas-Bel2014] has catalyzed significant advances in the
 morphological analysis of urban physical structure, with the studies of
 @MBarthelemy2017, @RLoufBarthelemy2014, @PSchirmerAxhausen2016,
-@GBoeing2019 -@GBoeing2020a, and @MFleischmannEtAl2020b of particular
+@GBoeing2019 -@GBoeing2020a, and @MFleischmannEtAl2020 of particular
 note. But with regard to the latter point of cognitive social maps,
 although the essential ideas have been well-established since the
 studies of @PGouldWhite1974 and @KLynch1960, there remains more work to
@@ -745,8 +710,7 @@ vital social purposes of creating a natural place for public contact
 (pp.72-96), and of providing the "eyes upon the streets" (p.45) necessary
 to induce the social restraint which makes for public safety (pp.37-71).
 
-
-# Statistical Strategies for Areal Interpolation
+# Zone Design and Areal Interpolation
 
 
 # Conclusion: The Emerging Research Agenda
