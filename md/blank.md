@@ -427,7 +427,7 @@ simply segmenting the attribute space by intervals. Instead these could
 be detected by an iterative computational algorithm, made available in
 reproducible FORTRAN code [@RTryonBailey1966].
 
-
+... factor ecology ...
 
 # The Ontological and Ethical Critiques of Geodemographics
 
@@ -505,6 +505,8 @@ assessment is considered valid, the development of free and open
 alternatives would seem to be a necessary strategy of resistance
 [@DSwanlundSchuurman2019]. But regarding the ontological question of how
 to define a neighbourhood, more must be said.
+
+... other developments
 
 # Defining Neighbourhoods: Problems and Possibilities
 
@@ -798,9 +800,10 @@ to induce the social restraint which makes for public safety (pp.37-71).
 
 # Areal Interpolation
 
+... areal interpolation ...
 
 # Conclusion: The Emerging Research Agenda
 
-
+... agenda ...
 
 # Bibliography
