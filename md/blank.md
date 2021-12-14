@@ -4,52 +4,51 @@ author: Peter Prescott
 ---
 
 This paper offers a critical introduction to *geodemographic analysis*,
-reviewing the relevant literature so as to understand the current
-state of research, to identify unresolved questions and issues 
-requiring further study, and to develop an agenda of priorities for this
-doctoral thesis. 
+reviewing the relevant literature so as to understand the current state
+of research, to identify unresolved questions and issues requiring
+further study, and to develop an agenda of priorities for this doctoral
+thesis. 
 
 We begin by setting our study within the context of the ubiquitous
-practice of locational inference. Next, we introduce
-geodemographics itself, offering a description, an explanatory etymology
-and an initial overview of its development.  We then review the
-historical antecedents of geodemographic analysis in more detail: the
-groundbreaking visualizations of nineteenth-century urban thematic
-cartography; the rich investigative agenda of the early Chicago School's
-human ecology; and the quantitative developments of social area analysis
-and factorial ecology.  From there, we examine the subsequent critiques
-and controversies that have been provoked by
-geodemographics, finding two principal components in the dicussion which
-continue to generate heated debate: the ethical dimension of social
+practice of locational inference. Next, we introduce geodemographics
+itself, offering a description and explanatory etymology.  We then
+review the historical antecedents of geodemographic analysis in more
+detail: the groundbreaking visualizations of nineteenth-century urban
+thematic cartography; the rich investigative agenda of the early Chicago
+School's human ecology; and the shift to quantitative social area
+analysis and factorial ecology.  From there, we examine the subsequent
+development and discussion of geodemographics within British academia,
+finding two principal components in the debate which continue to
+generate heated controversy: the ethical dimension of social
 surveillance on the one hand, and the ontological dimension of
 neighbourhood definition on the other.  Consideration of the first leads
 us to appreciate the importance of free and open source geodemographic
 classifications, which have now become well-estalished; consideration of
-the second leads us to a survey of the intrinsic problems of the quantitative
-analysis of areal statistics, and a deeper investigation into studies of
-neighbourhood dynamics and ontology. Finally, we review developments
-neighbourhood zone design, and in the techniques of areal interpolation
-of a data from some original geographic partition to some alternative
-set of areal boundaries. We conclude by summarizing the specific
+the second leads us to a survey of the intrinsic problems of the areal
+zone design, and a deeper consideration of neighbourhood dynamics and
+ontology.  Finally, we review developments in the techniques of areal
+interpolation of data from some original geographic frame of reference
+to an alternative geography. We conclude by summarizing the specific
 research goals resulting from our review of the literature.
 
 # The Ubiquity of Locational Inference
 
 On meeting a person for the first time, it is common to ask *'Where are
-you from?'* [@GMyers2006]. Knowing something about the place with which a person is
-associated reveals something about that person -- such is the implicit and
-necessary logic underlying this question, and its commonplace
-conventionality reveals it to be a very widespread conviction. It may then
-turn out that the place is known directly to the one asking, in which case
-it may be considered in its unique specificity. More likely however, it
-will not: the contextual understanding gained from the answer must then be
-mediated by an attempt to fit the reply into some more generalized
-classificatory framework. This will enable the construction of analogies
-with other places of which the enquirer does have direct experience, and
-the conversation can progress. Such a process will more likely happen
-instinctively than reflectively, but it inevitably must happen -- even if
-the (possibly subconscious) mental function to find an appropriate known
-category for the place in question returns an error.
+you from?'* [@GMyers2006]. Knowing something about the place with which
+a person is associated reveals something about that person -- such is
+the implicit and necessary logic underlying this question, and its
+commonplace conventionality reveals it to be a very widespread
+conviction. It may then turn out that the place is known directly to the
+one asking, in which case it may be considered in its unique
+specificity. More likely however, it will not: the contextual
+understanding gained from the answer must then be mediated by an attempt
+to fit the reply into some more generalized classificatory framework.
+This will enable the construction of analogies with other places of
+which the enquirer does have direct experience, and the conversation can
+progress. Such a process will more likely happen instinctively than
+reflectively, but it inevitably must happen -- even if the (possibly
+subconscious) mental function to find an appropriate known category for
+the place in question returns an error.
 
 Indeed, before the question 'Where are you from?' is verbally uttered,
 a provisional estimate of the answer will already have been made, on the
@@ -57,7 +56,7 @@ basis of visual, auditory, and even olfactory clues. Skin tone, eye
 colour, facial features, and other physical characteristics reflect
 genetic variations optimized over millenia for particular environments
 [@MBamshadOlson2003]. Accent and vocabulary mark the region in which the
-speaker learned to speak a language [@PBoland2010; DWeatherheadEtAl2016]. 
+speaker learned to speak a language [@PBoland2010; @DWeatherheadEtAl2016]. 
 Clothing and other worn accessories differ according to what is
 culturally fashionable and commercially viable in different places
 [@LCrewe2017]; so do perfumes, deodorants, and other noticeably fragrant
@@ -117,30 +116,6 @@ to the *social area analysis* [@EShevkyBell1955] he had been applying as
 a doctoral candidate at New York University [@Ricercar2021], assisting
 Edgar Borgatta in researching ways of classifying the social
 characteristics of American cities [@JHaddenBorgatta1965].
-
-@EShevkyBell1955 offered a method of classifying a census tract by
-reducing the attributes of its census data into a simplied expression of
-just three factors, which they suggested both retained the important
-details of the data, and corresponded to the essential nature of
-contemporary society. Each datapoint could then be visualized by a small
-circle in a two-dimensional scatter-plot, with the attributes along the
-x and y axes corresponding to the two more significant factors, and the
-circle's colour the third. The datapoints can then be divided up
-according to their position, and since their positional proximity is
-a function of their statistical similarity, census tracts with
-datapoints in the same segment can be considered as being of the same
-*type*.
-
-@RTryon1968 achieved a more sophisticated way of grouping census tract
-datapoints, showing how his *cluster analysis* [@RTryon1939] could
-identify 'clusters' of similar datapoints, avoiding the arbitrariness of
-simply segmenting the attribute space by intervals. Instead these could
-be detected by an iterative computational algorithm, made available in
-reproducible FORTRAN code [@RTryonBailey1966]. From a contemporary
-perspective, cluster analysis is a primary example of unsupervised
-machine learning [@SShalev-ShwartzBen-David2014], thus making
-geodemographic analysis one of the first, and arguably even the
-original, example of its application.
 
 While clustering census tracts provides a way of segmenting them into
 similar groups, the *ecological fallacy* [@WRobinson1950] means it does
@@ -236,8 +211,7 @@ officers within the Borough" (p.21).
 @AHume1858a](../fig/AHume1858.jpg){#fig:Hume_LiverpoolMap}
 
 Hume is aware that a more precise analysis would be made possible "if we
-could compare *houses, families, or individuals* relieved" (p.22), but
-is content that "for practical purposes they are sufficiently so now".
+could compare *houses, families, or individuals* relieved" (p.22)
 Still, when @JTobias1974 applied modern mathematical methods to Hume's
 data (examining p-value scores, chi-squared tests and correlation
 coefficients) he found that "Hume's impressionistic descriptions have
@@ -428,22 +402,32 @@ methods], could be treated as latent variables and modeled... easily".
 
 ![*Social Area Analysis* of the San Francisco Bay Region, after @EShevkyBell1955](../fig/ShevkyBell1955.png){#fig:ShevkyBell_SanFrancisco}
 
-It was Eshref Shevky and his associates who developed a more
-sophisticated multivariate analysis of census tract data, reducing the
-dimensionality of the data to the three *factors* of 'social rank',
-'urbanization', and 'segregation'. This was done first for Los Angeles
+@EShevkyBell1955 offered a method of classifying a census tract by
+reducing the attributes of its census data into a simplied expression of
+three factors, 'social rank', 'urbanization', and 'segregation', which 
+they suggested both retained the important
+details of the data, and corresponded to the essential nature of
+contemporary society. Each datapoint could then be visualized by a small
+circle in a two-dimensional scatter-plot, with the attributes along the
+x and y axes corresponding to the two more significant factors, and the
+circle's colour the third. The datapoints can then be divided up
+according to their position, and since their positional proximity is
+a function of their statistical similarity, census tracts with
+datapoints in the same segment can be considered as being of the same
+*type*. This was done first for Los Angeles
 [@EShevkyWilliams1949a], and then San Franciso [@WBell1953,
 @Fig:ShevkyBell_SanFrancisco], before being advocated more broadly as
 a method of analyis with general applicability to the social analysis of
-American cities [@EShevkyBell1955]. Having calculated the score of each
-census tract with regards to the three theoretically fundamental
-factors, the tract could be grouped together with others with similar
-configurations of scores. Shevky's method was debated and developed
-[@PNewtonJohnston1976] in various more open-ended directions and
-deployed in a number of diverse contexts [@PRees1971]. Of particular
-interest was the claim that the principle components to which they had
-reduced their data were the fundamental factors differentiating the
-residential groups of modern society [@DTimms1971].
+American cities [@EShevkyBell1955].
+
+@RTryon1968 achieved a more sophisticated way of grouping census tract
+datapoints, showing how his *cluster analysis* [@RTryon1939] could
+identify 'clusters' of similar datapoints, avoiding the arbitrariness of
+simply segmenting the attribute space by intervals. Instead these could
+be detected by an iterative computational algorithm, made available in
+reproducible FORTRAN code [@RTryonBailey1966].
+
+
 
 # The Ontological and Ethical Critiques of Geodemographics
 
@@ -585,6 +569,92 @@ city, and the accompanying "tendency of each inner zone to extend its
 area by the invasion of the next outer zone" [@EBurgess1925 p.51;
 @Fig:BurgessDiagrams]? 
 
+![Consideration of how census tract boundaries might relate to social natural areas, after @CMorphet1993](../fig/CMorphet1993_NaturalBoundaries.png){#fig:homogeneous}
+
+The simplest possibility is that suggested by @CMorphet1993, who assumes
+that if census enumeration districts (EDs) were to constitute a 'natural
+area', they must be "homogeneous in their social composition". He
+investigated whether ED boundaries correspond to significant social
+boundaries, providing a figure to illustrate the spectrum of
+possibilities [@Fig:homogeneous]: as well as the obvious cases where the
+ED boundaries and social geography either differ completely or agree
+entirely, he also considers the possibility that ED boundaries could
+coincide with some meaningful social boundaries but that within the ED
+there might be a dissimilar diversity of social geographic areas. And it
+seems to him a self-evident truth that "[t]he only significant ED
+boundaries are those to be found between *different but homogeneous*
+EDs" (p.1274; emphasis original). Morphet encounters difficulties due to
+the fact that his data is only available at the ED level, and so it is
+impossible (without some supplementary source of information) to say
+whether and where there are boundaries between areas of social
+homogeneity that do not coincide with ED boundaries. The approach he
+takes is to consider variables whch plausibly "might exhibit a 'natural'
+geography of variation at or around the ED scale" (p.1271), but even
+when he relaxes his definition of homogeneity by defining it negatively
+rather than positively, or reducing the threshold from 100% to 95%, he
+finds that "[t]he number of homogeneous EDs is ... surprisingly small"
+(p.1272); "only in terms of tenure type was there a significant degree
+of homogeneity in the EDs of Newcastle upon Tyne in 1981" (p.1273).
+It is therefore no subsequent surprise that he finds a negligible
+proportion ("out of many thousand ED boundaries in the 1981 Census map
+of Newcastle, only two") to constitute significant social boundaries.
+
+Morphet is certainly right to draw attention to the fact that census
+enumeration districts do not necessarily constitute socially meaningful
+geographic units. Indeed, it used to be the case that a key
+consideration governing the definition of census tract boundaries was
+that census enumerators should have an equal and manageable workload
+[@CDenham1980]. The lack of correspondence between administrative
+areal boundaries and socially recognizable neighbourhood units as caused
+a number of writers to complain hyperbolically of the "tyranny" of
+"imposed zoning systems" [@SOpenshawRao1995], "census geography"
+[@JSperling2012] and even "neighbourhood" itself [@APetrovicEtAl2020].
+
+We should note though that in Britain at least the geographic boundaries
+of census output data have since 2001 been decoupled from the
+enumeration district boundaries of census data collection [@DMartin1998;
+@DMartin2000; @DMartinEtAl2001; @PReesMartin2002], making use of the
+flexibility afforded by the digitalization of data record-keeping and
+geographic boundary definition [@fig:Separate]. Official census
+geography has to navigate the tension of several competing priorities:
+confidentiality requires that the census output areas cannot be smaller
+than an appropriate threshold; census output areas are also required by
+law to nest within statutary boundaries; and those who make use of
+census data differ as to whether they would prefer areal units that
+align with well-known postcode geographies, with administrative areas,
+with a grid, or -- for the sake of temporal consistency -- with whatever
+output units were used previously [@ODuke-WilliamsRees1998, p.580]. In
+Britain, "due to residential clustering at the small area level,
+[unit] postcodes also tend to exhibit reasonably strong internal homogeneity of
+the socioeconomic and built environments" [@SCockingsEtAl2013, p.1405],
+and so the unit postcode has been used as the basic spatial unit which
+is then formed into output area zones by randomly allocating adjacent 
+units into zones and then iteratively optimizing for a selection of
+target outcomes, using an automated zoning procedure which was first
+suggested by @SOpenshaw1977. As well as consistent population size and
+regular shape, those target outcomes also include social homogeneity
+[@DMartin2002, p.45].
+
+![In Britain since 2001, there has been a separation of the census
+geographies use for data collection and output [@DMartin2000]](../fig/DMartin2000_CensusGeographies.png){#fig:separate}
+
+However, we might question whether a meaningful geographic social
+'natural area' must be homogeneous? Statistically, it is obviously true
+that if data is released in (maximally) homogeneous units, then less
+information will be lost. But a quantity can very easily be 'maximal'
+while still being very small.  It is also true that the proverbial
+observation that 'birds of a feather flock together'
+[@MMcPhersonEtAl2001] has often been used to offer an intuitive
+justification for why geodemographic classification should be useful
+[@RHarrisEtAl2001; @PLongley2012; @BLeventhal2016]. But the easy rhyming
+familiarity of the phrase conceals as much as it reveals. If indeed
+people living in the same place are more likely to be similar, or as
+Tobler's "first law of geography" [@HMiller2004] might put it, "near
+things are more related than distant things" [@WTobler1970], is the
+operative causal process one of *homophily*, in that those already
+similar prefer to be nearer to each other, or of *contagion*, in that
+those already near become more similar [@CShaliziThomas2011]? 
+
 An impressive case is made by @GGalster2019 that "to understand the
 causes and effects of neighborhoods one must embed them in a framework
 in which four spatial levels--metropolitan, local jurisdiction,
@@ -601,6 +671,12 @@ all of this occurs within the context of the regional housing market.
 ![Holistic, multilevel, circular causation model of neighbourhoods,
 after
 @GGalster2019](../fig/GGalster2019_NeighborhoodCausationModel.png){#fig:model}
+
+Support for Galster's multilevel suggestion is found in the recent work
+of @LAlessandrettiEtAl2020 on human mobility. Previous empirical studies
+of human mobility [@DBrockmannEtAl2006; @MGonzalezEtAl2008;
+@CSongEtAl2010] had suggested that the data demonstrated that human
+mobility is scale-free, but Alessandretti shows that 
 
 Galster credits his multilevel model to the inspiration of
 @GSuttles1972, whose "groundbreaking observation that people are
@@ -710,8 +786,11 @@ vital social purposes of creating a natural place for public contact
 (pp.72-96), and of providing the "eyes upon the streets" (p.45) necessary
 to induce the social restraint which makes for public safety (pp.37-71).
 
-# Zone Design and Areal Interpolation
+# Areal Interpolation
 
 
 # Conclusion: The Emerging Research Agenda
 
+
+
+# Bibliography
