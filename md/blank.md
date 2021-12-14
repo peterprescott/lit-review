@@ -675,21 +675,31 @@ after
 Support for Galster's multilevel suggestion is found in the recent work
 of @LAlessandrettiEtAl2020 on human mobility. Previous empirical studies
 of human mobility [@DBrockmannEtAl2006; @MGonzalezEtAl2008;
-@CSongEtAl2010] had suggested that the data demonstrated that human
-mobility is scale-free, but Alessandretti shows that 
+@CSongEtAl2010] based on massive datasets show that the distribution of
+travelling distances decays as a power law, which resembles the
+cumulative distribution of scale-free random walks, in apparent
+contradiction of our intuitive geographic sense that human behaviour is
+constrained by the boundaries of different sorts of place at a variety
+of nested spatial scales: certainly rooms, buildings, cities, and countries,
+and perhaps too one or more spatial containers corresponding to the
+somewhat elusive 'neighbourhood'. Alessandretti et al first show that
+"mixtures of normal (or lognormal) distributions with different
+variances can generate power laws" (p.402), and then demonstrate that
+their nested container model "provides a better description
+of mobility compared with other state-of-the-art models (p.405).
 
-Galster credits his multilevel model to the inspiration of
-@GSuttles1972, whose "groundbreaking observation that people are
-cognitive of four distinct spatial levels of neighbourhood" (p.39). At
-Suttles' time of writing, the 'natural area' concept of Park, Burgess,
-and the interwar Chicago School, had fallen thoroughly out of fashion.
-@MAlihan1938 had concluded that although "the ecological school [was]
-one of the most definite and influential schools in American sociology"
-(p.xi), "the concept 'natural area', so fundamental to human ecology,
-has not as yet been consistently defined and logically classified...
-[and] no amount of empirical investigation can rectify the
-inconsistencies inherent in the theoretical statements pertaining to it"
-(p.240). Refusing to accept Alihan's damning verdict, @GSuttles1972
+Galster credits his account of a multilevel neighbourhood model to the
+inspiration of @GSuttles1972, whose "groundbreaking observation that
+people are cognitive of four distinct spatial levels of neighbourhood"
+(p.39). At Suttles' time of writing, the 'natural area' concept of Park,
+Burgess, and the interwar Chicago School, had fallen thoroughly out of
+fashion.  @MAlihan1938 had concluded that although "the ecological
+school [was] one of the most definite and influential schools in
+American sociology" (p.xi), "the concept 'natural area', so fundamental
+to human ecology, has not as yet been consistently defined and logically
+classified...  [and] no amount of empirical investigation can rectify
+the inconsistencies inherent in the theoretical statements pertaining to
+it" (p.240). Refusing to accept Alihan's damning verdict, @GSuttles1972
 [p.21] attempted "to resurrect the concept... and show that it may still
 be usefully applied to urban areas", noting the need to consider both
 the "physical structure of the city", and "the cognitive map which
