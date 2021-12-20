@@ -13,7 +13,7 @@ We begin by setting our study within the context of the ubiquitous
 practice of locational inference. Next, we introduce geodemographics
 itself, offering a description and explanatory etymology.  We then
 review the historical antecedents of geodemographic analysis in more
-detail: the groundbreaking visualizations of nineteenth-century urban
+detail: the pioneering visualizations of nineteenth-century urban
 thematic cartography; the rich investigative agenda of the early Chicago
 School's human ecology; and the shift to quantitative social area
 analysis and factorial ecology.  From there, we examine the subsequent
@@ -414,11 +414,11 @@ circle's colour the third. The datapoints can then be divided up
 according to their position, and since their positional proximity is
 a function of their statistical similarity, census tracts with
 datapoints in the same segment can be considered as being of the same
-*type*. This was done first for Los Angeles
-[@EShevkyWilliams1949a], and then San Franciso [@WBell1953,
-@Fig:ShevkyBell_SanFrancisco], before being advocated more broadly as
-a method of analyis with general applicability to the social analysis of
-American cities [@EShevkyBell1955].
+type. This was done first for Los Angeles [@EShevkyWilliams1949a], and
+then San Franciso [@WBell1953, @Fig:ShevkyBell_SanFrancisco], before
+being advocated more broadly as a method of analyis with general
+applicability to the social analysis of American cities
+[@EShevkyBell1955].
 
 @RTryon1968 achieved a more sophisticated way of grouping census tract
 datapoints, showing how his *cluster analysis* [@RTryon1939] could
@@ -427,18 +427,37 @@ simply segmenting the attribute space by intervals. Instead these could
 be detected by an iterative computational algorithm, made available in
 reproducible FORTRAN code [@RTryonBailey1966].
 
-TODO... factor ecology ...
+But initially it was the other aspect of the methodology of Shevky and
+his associates that saw more widespread adoption, the *factor analysis* of
+the principal components of a social data matrix, and the *factorial
+ecology* [@PRees1971] which sought to draw insight into social processes
+from the application of such algebraic analysis to the quantitative data
+describing residential populations. Such studies of American cities
+include those of Boston [@FSweetser1965], Newark [@CJanson1974], Seattle
+[@CSchmid1960], and San Francisco [@RTryon1955]; and the technique was
+also tested in the contexts of other cultures, in Calcutta
+[@BBerryRees1969], Cairo [@JAbu-Lughod1969], Canberra [@FJones1965],
+Helsinki [@FSweetser1965], and Sunderland [@BRobsonRobson1969].
 
-# The Ontological and Ethical Critiques of Geodemographics
+@DTimms1971,p.55 notes that "the results of a factor analysis vary not
+only with the nature of the data input and the particular type of factor
+analytic technique employed, but also with the theoretical predilections
+of the investigators", but is nevertheless impressed that for all that
+the residential differentiation of the majority of cities seems to be a
+reflection of underlying factors similar to those identified by Shevky.
 
-While Robbin coined the term 'geodemographics' and successfully turned
-it into a profitable commercial product, his impact on the academic
-understanding of neighbourhoods was quite limited. He dropped out of his
-PhD without completing it, after his supervisor left to take up a post
-at another university [@Ricercar2021], and it has subsequently been the
-case in North America that, as a method for studying neighbourhood
-dynamics and effects, "many academic social scientists ignore
-geodemographics" [@MReibel2011, p.310].
+# The Development of Geodemographics and Ongoing Debates
+
+Having reviewed the historical antecedents of geodemographic analysis we
+now survey its continued development. While Robbin coined the term
+'geodemographics' and successfully turned it into a profitable
+commercial product, his impact on the academic understanding of
+neighbourhoods was quite limited. He dropped out of his PhD without
+completing it, after his supervisor left to take up a post at another
+university [@Ricercar2021], and it has subsequently been the case in
+North America that, as a method for studying neighbourhood dynamics and
+effects, "many academic social scientists ignore geodemographics"
+[@MReibel2011, p.310].
 
 In Britain however, the situation is quite different, largely because of
 the different circumstances of its separate development by Richard
@@ -503,10 +522,13 @@ will suffice to note that on the one hand, a positive argument can be
 made for it, while on the other hand, to whatever extent the negative
 assessment is considered valid, the development of free and open
 alternatives would seem to be a necessary strategy of resistance
-[@DSwanlundSchuurman2019]. But regarding the ontological question of how
-to define a neighbourhood, more must be said.
+[@DSwanlundSchuurman2019]. 
 
-TODO ... other developments
+As well as these two debates, there has also been other less contentious
+development in the field of geodemographic analysis, particular since
+the realization that geodemographic products could assist in efficient
+public service delivery led to "a renaissance" [@PLongley2005] of research
+in the area. 
 
 # Defining Neighbourhoods: Problems and Possibilities
 
@@ -656,6 +678,11 @@ things are more related than distant things" [@WTobler1970], is the
 operative causal process one of *homophily*, in that those already
 similar prefer to be nearer to each other, or of *contagion*, in that
 those already near become more similar [@CShaliziThomas2011]? 
+@DTimms1971 also makes a helpful distinction, noting that in his view
+"the criterion of homogeneity is not that all the people inhabiting a
+given area should be the same, but that the probability of their being
+of a particular characteris should be alike in all parts of the area"
+(p.42).
 
 An impressive case is made by @GGalster2019 that "to understand the
 causes and effects of neighborhoods one must embed them in a framework
