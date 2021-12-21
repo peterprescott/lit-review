@@ -615,24 +615,35 @@ assignments over an intercensal period by classifying simultaneously
 data from the 2001 and 2011 censuses.
 
 @ASingletonLongley2009 suggested that the usefulness of general-purpose 
-geodemographic products was approaching an "imminent demise". But while
-commercial companies 
+geodemographic products was approaching an "imminent demise". That has
+not meant an end of geodemographic analysis however, but rather the
+opposite, as the 'avalanche' [@HMiller2010] of social data
+[@DArribas-Bel2014] has given researchers many more sources of
+sociospatial quantitative information than were previously available.
+Whereas previous analyses were largely restricted to the decennial
+census, recent research has applied geodemographic techniques to a wide
+variety of data sources ranging from New York taxi GPS data
+[@YLiuEtAl2021] to historical individual census data from over a century
+ago [@TLanLongley2021]. Although some of this newly available data is
+open, much of it is proprietary and can not be released because of
+confidentiality requirements; however @ASingletonLongley2019 demonstrate
+how it is possible to create the necessary *data infrastructure* to do
+geodemographic analysis on such data in a secure environment, thus
+enabling the creation of insightful products that can then be safely
+shared more widely.
 
-and this
-has in some measure been the case, as the 'avalanche' [@HMiller2010] of
-social data [@DArribas-Bel2014] has created an abundance of novel data
-sources that in many cases have obviated the need to depend on the
-intermediary of a geodemographic classification to understand
-communities.
+A different approach to creating geodemographic products is that
+suggested by @MAdnanEtAl2010, who explored the possibility of an
+application that might enable the creation of real-time 'on-the-fly'
+geodemographic classifications. Adnan et al found that "a major problem
+is the speed at which the clustering algorithm can be used to create
+robust partitions of datasets into homogeneous groups" (p.285), but in
+the decade or so since, there have been various advances that might make
+such a thing easier, particularly in the area of parallel computing
+[@MAdnanEtAl2014], with frameworks such as @MZahariaEtAl2016.
 
-apps
-
-data
-
-theory
-
-
-
+Having shown that it is not everywhere the case that academics ignore
+geodemographics, we return to the question of its theoretical rootedness.
 As an example of unsupervised machine learning, geodemographic
 classifications are said to be 'theory-free', in that they are not based
 on explicitly defined hypotheses that can be verified with clear
@@ -950,12 +961,8 @@ vital social purposes of creating a natural place for public contact
 (pp.72-96), and of providing the "eyes upon the streets" (p.45) necessary
 to induce the social restraint which makes for public safety (pp.37-71).
 
-# Areal Interpolation
-
-TODO ... areal interpolation ...
-
 # Conclusion: The Emerging Research Agenda
 
-TODO ... agenda ...
+
 
 # Bibliography
