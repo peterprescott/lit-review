@@ -560,7 +560,7 @@ should define proximity within the attribute space, and of course on the
 choice of algorithm itself.
 
 Attempts have been made to address some of the drawbacks of the k-means
-algorithm. @DPellelMoore2000 showed how the optimal number of clusters
+algorithm. @DPellegMoore2000 showed how the optimal number of clusters
 could be estimated, using a criterion such as the Akaike Information
 Criterion or the Bayesian Information Criterion.
 @DArthurVassilvitskii2007 suggested an improvement to the initial
@@ -577,7 +577,7 @@ geodemographic analysis.  @BHeumannEtAl2020 used *affinity propogation*
 to cluster the zip codes of the contiguous United States into eleven
 categories, each characterized by a cluster exemplar; thus achieving a
 quantitative way of identifying the 'typical American community' or
-'Middletown', an idea first developed by @RLyndLynd.
+'Middletown', an idea first developed by @RLyndLynd1929.
 @SSpielmanThill2008 used the *self-organizing map* introduced by
 @TKohonen1990 to analyze census tracts in New York City.
 @JCheshireEtAl2011 suggested that *consensus clustering*, using multiple
@@ -656,7 +656,7 @@ device, then one might consider 'the spatialization of class'
 consider how field-capital theory explains consumer segmentation
 [@ATappWarren2010]; if it is seen as a way of understanding residential
 segmentation, then one would need to consider the social causes and
-spatial patterns of housing differentiation [@DTimms1975] -- why do
+spatial patterns of housing differentiation [@DTimms1971] -- why do
 people choose to move (or not) to certain areas? [@PRossi1955]; and why
 do different neighbourhoods develop the way they do? [@JJacobs1961].
 
