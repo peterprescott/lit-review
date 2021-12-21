@@ -567,7 +567,10 @@ Criterion or the Bayesian Information Criterion.
 seeding of cluster centroids, which they called *k-means++*.
 @BBahmaniEtAl2012 implemented a parallel version of the k-means
 algorithm able to take advantage of the efficiencies of distributed
-computing.
+computing. @YLiuEtAl2019 demonstrated that using *principal component
+analysis* to reduce the variables from the 2011 Census helped them
+achieve a lower (and better) within-cluster sum-of-squared-distance
+score compared to the official 2011 Output Area Classification.
 
 Other clustering strategies have also been implemented in
 geodemographic analysis.  @BHeumannEtAl2020 used *affinity propogation*
@@ -580,7 +583,6 @@ quantitative way of identifying the 'typical American community' or
 @JCheshireEtAl2011 suggested that *consensus clustering*, using multiple
 algorithms in combination, offered a way of overcoming the arbitrary
 nature of cluster results dependent on choice of algorithm.
-
 @ZFengFlowerdew1999 first introduced the use of
 *fuzzy* geodemographic classification, in which an area is not assigned
 unambiguously to a single cluster, but rather is assigned scores
@@ -589,16 +591,69 @@ compared the more common fuzzy *c-means algorithm* with the
 *Gustafson-Kessel* algorithm, and concluded that for low values of *c*,
 the latter was superior.
 
-@ASingletonLongley2009 lists several other key questions that 
+While there is nothing specifically geographic about cluster analysis,
+there have been several attempts to include geographical context in
+building geodemographic classifications [@AAlexiouSingleton2015]. 
+@ASingletonEtAl2012 integrated a geodemographic typology into a spatial
+interaction framework to model the flow of students into higher
+education. @GGrekousis2021 presented a spatially-aware fuzzy
+geodemographic algorithm that updated the cluster membership scores with
+reference only to datapoints within a certain neighbourhood range.
+@LWolf2021 explored how *spectral clustering* could blend geodemographic
+classification techniques with regionalization.
 
+As well as being basically aspatial, geodemographic classifications
+have also been essentially atemporal, merely providing a simplified
+snapshot of data captured at some static point -- in stark contrast to
+typical *demography*, where "time, in various guises, is integral to the
+conceptual and methodological apparatus [of the subject]" [@MBell2015].
+But in this area too, there have been exceptions. @CGaleLongley2013 used
+mid-year population estimates and housing stock data to develop three
+temporal uncertainty indicators for gauging neighbourhood stability.
+@ASingletonEtAl2016 explored the stability of geodemographic cluster
+assignments over an intercensal period by classifying simultaneously
+data from the 2001 and 2011 censuses.
 
-fuzzy c-means
+@ASingletonLongley2009 suggested that the usefulness of general-purpose 
+geodemographic products was approaching an "imminent demise". But while
+commercial companies 
 
-geographic contiguity
+and this
+has in some measure been the case, as the 'avalanche' [@HMiller2010] of
+social data [@DArribas-Bel2014] has created an abundance of novel data
+sources that in many cases have obviated the need to depend on the
+intermediary of a geodemographic classification to understand
+communities.
 
-time 
+apps
+
+data
 
 theory
+
+
+
+As an example of unsupervised machine learning, geodemographic
+classifications are said to be 'theory-free', in that they are not based
+on explicitly defined hypotheses that can be verified with clear
+statistical tests [@ASingletonSpielman2014]. In a certain, limited
+sense, this is true, but there is certainly much that a consideration of
+geodemographics can offer social theorists.
+If geodemographics is seen as a sociological research
+device, then one might consider 'the spatialization of class'
+[@SParkerEtAl2007]; if it is seen as a marketing tool, then one might
+consider how field-capital theory explains consumer segmentation
+[@ATappWarren2010]; if it is seen as a way of understanding residential
+segmentation, then one would need to consider the social causes and
+spatial patterns of housing differentiation [@DTimms1975] -- why do
+people choose to move (or not) to certain areas? [@PRossi1955]; and why
+do different neighbourhoods develop the way they do? [@JJacobs1961].
+
+But as intimately connected to the subject as they may seem, these are
+arguably extraneous to the essential nature of geodemographic
+classification *per se*. On the other hand, the fundamental ontological
+question of *what* it is that geodemographic analysis classifies, is
+unavoidably intrinsic to the subject, and yet remains unresolved.
 
 # Defining Neighbourhoods: Problems and Possibilities
 
