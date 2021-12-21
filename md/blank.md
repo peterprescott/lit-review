@@ -84,7 +84,7 @@ ranging from direct marketing [@MEvans1998], retail location selection
 [@RWebber2006; @JRobbin1980], and military recruitment
 [@JDeReuRobbin1981], to social service resource allocation
 [@PLongley2005] : whether that service be in the field of health
-[@MFarrEtAl2008], education [@ASingletonLongley2009c], or policing
+[@MFarrEtAl2008], education [@ASingletonLongley2009], or policing
 [@DAshbyLongley2005].
 
 ![An Example of Geodemographic Visualization:\newline Choropleth Map showing
@@ -451,7 +451,7 @@ reflection of underlying factors similar to those identified by Shevky.
 Having reviewed the historical antecedents of geodemographic analysis we
 now survey its continued development. While Robbin coined the term
 'geodemographics' and successfully turned it into a profitable
-commercial product, his impact on the academic understanding of
+commercial product, his direct impact on the academic understanding of
 neighbourhoods was quite limited. He dropped out of his PhD without
 completing it, after his supervisor left to take up a post at another
 university [@Ricercar2021], and it has subsequently been the case in
@@ -524,11 +524,81 @@ assessment is considered valid, the development of free and open
 alternatives would seem to be a necessary strategy of resistance
 [@DSwanlundSchuurman2019]. 
 
-As well as these two debates, there has also been other less contentious
-development in the field of geodemographic analysis, particular since
+As well as these two debates, there have also been other less contentious
+developments in the field of geodemographic analysis, particular since
 the realization that geodemographic products could assist in efficient
 public service delivery led to "a renaissance" [@PLongley2005] of research
-in the area. 
+in the area. Cluster analysis is of course used not only in geography
+and the social sciences, but in fields ranging from biology
+[@ABustamamEtAl2017; @MGonenMargolin2014] to psychology [@DSteinley2008]
+to finance [@PRinnEtAl2015] -- any subject that involves large
+quantities of high-dimensional data.
+
+Methods for grouping geoographic areas have therefore progressed
+significantly since the crude interval partition used by
+@EShevkyBell1955. The iterative *k-means algorithm* [@DSteinley2006]
+seems consistently to be a default choice of algorithmic technique for
+geodemographic classification, from Jonathan Robbin's first
+geodemographic products [@JDeReuRobbin1981] to the Open Area
+Classification from the 2011 Census [@CGaleEtAl2016]. In fact it has
+been one of the mostly widely used clustering algorithms over the last
+fifty years, because of its "ease of implementation, simplicity,
+efficiency and empirical success" [@AJain2010, p.653]. The algorithm
+begins by randomly selecting *k* cluster centroids, and then proceeds 
+iteratively by allocating each datapoint to whichever cluster centroid
+is nearest (for some given metric function in attribute space, most
+usually the Euclidean metric), and then shifting the position of the
+cluster centroid so that it it located at the mean position of all those
+datapoints allocated to its cluster, continuing until a stable solution
+has been reached. In theory, one can define the best k-means partition
+of a dataset as the one which minimizes the total distance between each
+point and its cluster centre, but considering every possible partition
+is unfeasible for large datasets, and so in practice the solution is
+dependent on the initial random seed -- as well as on the choice of how
+many clusters the algorithm should find, on the choice of what metric
+should define proximity within the attribute space, and of course on the
+choice of algorithm itself.
+
+Attempts have been made to address some of the drawbacks of the k-means
+algorithm. @DPellelMoore2000 showed how the optimal number of clusters
+could be estimated, using a criterion such as the Akaike Information
+Criterion or the Bayesian Information Criterion.
+@DArthurVassilvitskii2007 suggested an improvement to the initial
+seeding of cluster centroids, which they called *k-means++*.
+@BBahmaniEtAl2012 implemented a parallel version of the k-means
+algorithm able to take advantage of the efficiencies of distributed
+computing.
+
+Other clustering strategies have also been implemented in
+geodemographic analysis.  @BHeumannEtAl2020 used *affinity propogation*
+to cluster the zip codes of the contiguous United States into eleven
+categories, each characterized by a cluster exemplar; thus achieving a
+quantitative way of identifying the 'typical American community' or
+'Middletown', an idea first developed by @RLyndLynd.
+@SSpielmanThill2008 used the *self-organizing map* introduced by
+@TKohonen1990 to analyze census tracts in New York City.
+@JCheshireEtAl2011 suggested that *consensus clustering*, using multiple
+algorithms in combination, offered a way of overcoming the arbitrary
+nature of cluster results dependent on choice of algorithm.
+
+@ZFengFlowerdew1999 first introduced the use of
+*fuzzy* geodemographic classification, in which an area is not assigned
+unambiguously to a single cluster, but rather is assigned scores
+reflecting how well it fits in each cluster. @GGrekousisThomas2012
+compared the more common fuzzy *c-means algorithm* with the
+*Gustafson-Kessel* algorithm, and concluded that for low values of *c*,
+the latter was superior.
+
+@ASingletonLongley2009 lists several other key questions that 
+
+
+fuzzy c-means
+
+geographic contiguity
+
+time 
+
+theory
 
 # Defining Neighbourhoods: Problems and Possibilities
 
