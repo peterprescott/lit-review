@@ -28,9 +28,7 @@ us to appreciate the importance of free and open source geodemographic
 classifications, which have now become well-estalished; consideration of
 the second leads us to a survey of the intrinsic problems of the areal
 zone design, and a deeper consideration of neighbourhood dynamics and
-ontology.  Finally, we review developments in the techniques of areal
-interpolation of data from some original geographic frame of reference
-to an alternative geography. We conclude by summarizing the specific
+ontology.  We conclude by summarizing the specific
 research goals resulting from our review of the literature.
 
 # The Ubiquity of Locational Inference
@@ -963,11 +961,6 @@ vital social purposes of creating a natural place for public contact
 (pp.72-96), and of providing the "eyes upon the streets" (p.45) necessary
 to induce the social restraint which makes for public safety (pp.37-71).
 
-# Areal Interpolation Techniques
-
-
-
-
 # Conclusion: The Emerging Research Agenda
 
 More could doubtless be said, but our survey of the literature has
@@ -1017,12 +1010,10 @@ or a software package) to enable others to perform
 geodemographic analysis using the methods of neighbourhood definition
 and data interpolation that have been developed. 
 
-If these three goals can be achieved, then I believe I will have
-successfully contributed something to the field of geodemographic
-analysis to the understanding of neighbourhood
+So, having reviewed the literature we find ourselves with three clear
+research goals.  If these three aims can be fulfilled, then I believe I
+will have successfully contributed something to the field of
+geodemographic analysis and to the understanding of neighbourhood
 ecology.
-
-
-
 
 # Bibliography
