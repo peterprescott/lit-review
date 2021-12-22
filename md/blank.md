@@ -3,6 +3,8 @@ title: "Geodemographics: A Literature Review"
 author: Peter Prescott
 ---
 
+# Introduction
+
 This paper offers a critical introduction to *geodemographic analysis*,
 reviewing the relevant literature so as to understand the current state
 of research, to identify unresolved questions and issues requiring
@@ -369,7 +371,7 @@ case, particularly "where there is racial prejudice", that population
 segregation can intensify the "intimacies and solidarity" of the local
 neighbourhood group (p.9).
 
-![Community Areas of Chicago in
+![Choropleth Map showing Chicago Delinquency Rates in
 1930](../fig/ChicagoCommunityAreas.png){#fig:ChicagoCommunity}
 
 The volume includes E. Burgess's famous Concentric Zone diagram
@@ -561,8 +563,8 @@ choice of algorithm itself.
 
 Attempts have been made to address some of the drawbacks of the k-means
 algorithm. @DPellegMoore2000 showed how the optimal number of clusters
-could be estimated, using a criterion such as the Akaike Information
-Criterion or the Bayesian Information Criterion.
+could be automatically estimated, using a criterion such as the Akaike
+Information Criterion or the Bayesian Information Criterion.
 @DArthurVassilvitskii2007 suggested an improvement to the initial
 seeding of cluster centroids, which they called *k-means++*.
 @BBahmaniEtAl2012 implemented a parallel version of the k-means
@@ -925,7 +927,7 @@ lines, [and] historical factors in the location of industry" (p.52), and
 these complications are shown on Chart II of his well-known Concentric
 Zone Diagram (@Fig:BurgessDiagrams). But @RGrannis2009 demonstrates that
 not only are neighbourhoods defined by the way that urban areas are
-*divided* by major roads (and railways, rivers, etc.), but that for the
+*divided* by major roads (and railways, rivers, and so on), but that for the
 households within the same set of boundaries to be accessible to each
 other, they also need to be *connected* by safe, walkable pedestrian streets 
 -- that is, by contiguous residential face-blocks.
@@ -961,7 +963,65 @@ vital social purposes of creating a natural place for public contact
 (pp.72-96), and of providing the "eyes upon the streets" (p.45) necessary
 to induce the social restraint which makes for public safety (pp.37-71).
 
+# Areal Interpolation Techniques
+
+
+
+
 # Conclusion: The Emerging Research Agenda
+
+More could doubtless be said, but our survey of the literature has
+already revealed enough to establish a firm foundation for fruitful
+further research. Geodemographic analysis has been proven over the last
+forty years to be a tool that can effectively be applied to any field of
+activity interested in engaging real human communities within the
+local geographical spaces that provide the context for their everyday lives.
+However, in spite of much scholarly debate over various aspects of
+geodemographics, the issue of neighbourhood ontology on which the whole
+practice rests has received surprisingly little focussed attention. In
+considering it explicitly we have found that rather than being some
+intractably arcane and abstract issue, there have in fact been a number
+of writers who have suggested that the most basic spatial unit of
+geographical neighbourhood can be found in the *face-block* -- but this
+suggestion has not yet been brought into contact with geodemographic
+analysis. This may be because previously there were not availability the
+necessary data or computational techniques to operationalize such a
+concept. But in our contemporary context of abundant data availability
+and rapidly improving open-source computational tools, this should now
+be possible.
+
+The first goal emerging from our literature review must therefore be to
+operationalize the neighbourhood face-block unit as a basic
+geographic unit for the whole of Britain, developing whatever
+methods might be necessary to obtain such a unit from open data. In
+doing this, it will be worth exploring also whether it is possible to
+unambiguously operationalize the concept of neighbourhood
+networks of connected and contiguous residential face-blocks.
+
+If these face-blocks, and perhaps also their connected networks, are to
+not merely be basic geographic units but actual *geodemographic* units,
+then they must be associated with demographic data relating to their
+resident populations. The second goal of our research must therefore be
+to develop a method of interpolating data from the output areas for
+which it is made available to the face-block units in which we are
+interested. In order to establish the success of our methods,
+we must also find some way of testing the extent to which such a
+transformation is accurate or not.
+
+If these first two research goals are achieved, then the natural third
+goal would be at least to produce an open geodemographic classification
+using the theoretically-grounded neighbourhood face-block as its
+fundamental unit. Rather than simply producing a static product,
+it might be more fruitful to develop a tool (whether a web application
+or a software package) to enable others to perform
+geodemographic analysis using the methods of neighbourhood definition
+and data interpolation that have been developed. 
+
+If these three goals can be achieved, then I believe I will have
+successfully contributed something to the field of geodemographic
+analysis to the understanding of neighbourhood
+ecology.
+
 
 
 
